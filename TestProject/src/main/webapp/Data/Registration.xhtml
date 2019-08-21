@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Registration Page</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet"/>
+<!-- Bootstrap tooltips -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+			<!-- Bootstrap core JavaScript -->
+
+	<style>
+
+
+td {
+	padding-left: 30px;
+	font-size: 13px;
+}
+
+.selection {
+	border-radius: 5px;
+	border: 1px solid #b6b8ba;
+	height: 30px;
+	outline: none;
+	margin-top: -10px;
+}
+
+input[type=text] {
+	font-size: 13px;
+}
+
+.divspace {
+	width: 250px;
+}
+
+.divv{
+width: 150px;
+margin-top: -20px
+}
+
+.centerform {
+	width: 600px;
+	background-color: white;
+	border-radius: 30px;
+	border: 1 solid white;
+	margin-top: -12px;
+	color: black;
+	margin-left: 170px;
+}
+
+.divspacess {
+	margin-top: -15px;
+	width: 100px;
+}
+
+.lblback {
+	font-size: 13px;
+}
+
+.rad {
+	color: #696969;
+	font-size: 11px;
+	outline:none;
+}
+
+#mstyle {
+	font-weight: 100;
+}
+
+.divspace {
+	margin-top: -25px;
+}
+
+.buttonprop, .buttonprop:active {
+	text-align: justify;
+	background-color: black;
+	border-radius: 10px;
+	/* 	font-family: serif; */
+	margin-left: 190px;
+	/* 	width: 100px; */
+	height: 30px;
+	color: white;
+	text-align: center;
+}
+.md-form input[type=text], .md-form input[type=password]{
+border-bottom: 1px solid #2196f3;
+}
+
+.custom-control-label::after{
+    position: absolute;
+    top: .25rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    background: no-repeat 50%/50% 50%;
+}
+.md-form textarea.md-textarea{
+    padding: 0 !important;
+}
+.form-control{
+    border: 1px solid #4285f4;
+}
+</style>
+<script>
+		window.onload = function() {
+		
+			document.getElementById("contact_form:email").value = "";
+			document.getElementById("contact_form:uname").value = "";
+		}
+	</script>
+
+</h:head>
+<h:body>
+<ui:include src="header.xhtml" />
+	<br/><br/><br/>
+	<div class="container">
+		
+			<h:form class="form-horizontal" action=" " method="post"
+				id="contact_form">
+				
+				<div class="row"><div class="col-md-3 col-sm-3 col-xs-3">
+						<div class="md-form form-sm">
+						 <h:inputText styleClass="form-control" value="#{helloBean.name}" id="name" required="true" /> 
+						 <label >Name</label>
+					 	 </div>
+							</div><div class="col-md-3 col-sm-3 col-xs-3">
+						<table><tr><td>
+						 <h:selectOneMenu value="#{helloBean.countrycode}" styleClass="custom-select">
+						<f:selectItem itemValue="India" itemLabel="+91" />
+									<f:selectItem itemValue="Canada" itemLabel="+1" />
+									<f:selectItem itemValue="America" itemLabel="+4" />
+								</h:selectOneMenu>
+					 	 </td><td>
+					 	 <div class="md-form form-sm">
+						 <h:inputText styleClass="form-control" value="#{helloBean.phone}" id="phone" required="true" /> 
+						 <label for="phone">Number</label>
+					 	 </div>
+					 	 </td></tr></table>
+					 	 </div><div class="col-md-3 col-sm-3 col-xs-3">
+					 	 <div class="md-form form-sm">
+						 <h:inputText styleClass="form-control" value="#{helloBean.age}" id="age" required="true" /> 
+						 <label >Age</label>
+					 	 </div>
+					 	
+					 	 </div><div class="col-md-3 col-sm-3 col-xs-3">
+					 	 <div class="custom-control custom-radio">
+						 <h:selectOneRadio value="#{helloBean.gender}" style="margin-top: 15px;">
+										<f:selectItem itemValue="M"  itemLabel=" Male" id="mstyle"></f:selectItem>
+										<f:selectItem itemValue="F"  itemLabel="Female " />
+									</h:selectOneRadio>
+					 	 </div></div> </div>
+					 	 <div class="row"><div class="col-md-3 col-sm-3 col-xs-3">
+					 	 <div class="form-group">
+						  <label>Address</label>
+						   <h:inputTextarea id="address" value="#{helloBean.address}"
+																class="md-textarea form-control" required="true" />
+						</div>
+						</div><div class="col-md-3 col-sm-3 col-xs-3">
+						<div class="md-form form-sm">
+						 <h:inputText styleClass="form-control" value="#{helloBean.email}" id="email" required="true" /> 
+						 <label >Email</label>
+					 	 </div>
+					 	 </div><div class="col-md-3 col-sm-3 col-xs-3">
+					 	 <div class="md-form form-sm">
+						 <h:inputText styleClass="form-control" value="#{helloBean.country}" id="Country" required="true" /> 
+						 <label >Country</label>
+					 	 </div>
+					 	 </div><div class="col-md-3 col-sm-3 col-xs-3">
+					 	  <div class="md-form form-sm">
+						 <h:inputText styleClass="form-control" value="#{helloBean.username}" id="uname" required="true" /> 
+						 <label >User Name</label>
+					 	 </div>
+					 	  </div></div>
+					 	 <div class="row"><div class="col-md-3 col-sm-3 col-xs-3">
+					 	  <div class="md-form form-sm">
+						 <h:inputSecret id="pass" value="#{helloBean.pass}"
+										required="true" class="form-control " />
+						 <label >Password</label>
+					 	</div>
+					 	 </div><div class="col-md-3 col-sm-3 col-xs-3">
+					 	  <div class="md-form form-sm">
+					 	  <h:inputSecret id="pw" value="#{helloBean.confirmpass}"
+										required="true" class="form-control " />
+						
+						 <label >Confirm Password</label>
+					 	  </div></div> </div>
+								
+								<h:commandButton value="Register"
+									action="#{helloBean.addUser}"
+									class="btn btn-primary" />
+
+							
+					<br></br>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			
+			<!-- MDB core JavaScript -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+			</h:form>
+		
+	</div>
+</h:body>
+</html>

@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html 
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+ xml:lang="en" lang="en"> 
+	<head> 
+        <title>Doctor Pwa</title> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"/>
+		<link rel="manifest" href="manifest.json"/>
+			<script src="app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+	</head> 
+	<body>
+	 <h:form> 
+	<!--   <h:commandButton action="#{helloBean.getAbcd}" value="Abcd"></h:commandButton>-->
+      <button type="button" class="btn btn-outline-light" style="float: right;border:none;" onclick="location.href = 'index1.xhtml';">Abcd</button>
+      <button type="button" class="btn btn-outline-light" style="float: right;border-left:none;border-top:none;border-bottom:none" onclick="location.href = 'another.xhtml';">Xyz</button>
+      <button type="button" class="btn btn-outline-light" style="float: right;border-left:none;border-top:none;border-bottom:none" onclick="location.href = 'another1.xhtml';">John</button>
+      <button type="button" class="btn btn-outline-light" style="float: right;border-left:none;border-top:none;border-bottom:none" onclick="location.href = 'another2.xhtml';">Hospital</button>
+      <button type="button" class="btn btn-outline-light" style="float: right;border-left:none;border-top:none;border-bottom:none;" onclick="location.href = 'admin2.xhtml';">Admin</button>
+      </h:form>
+
+ <div class="container-fluid" style="background-color: #17768c;padding-bottom:10px;padding-top: 5px">
+    <div class="row" >
+      <div class="col-sm-1">
+        <img class="rounded" src=".\patient.jpg" alt="Patient Image" id="pimage"/>
+      </div>
+      
+        <p
+          style=" position: absolute;left:70px ;color:white; font-family:sans-serif;font-size: 14px">
+          Mr.John Britto Paul</p>
+  
+          <p
+            style="position: absolute;left:195px;top:8px;color:whitesmoke;font-size: 10px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+            (Male|23 Years|23-Jan-1992)</p>
+        
+        <p
+          style="position: absolute;left:70px;top:30px;color: whitesmoke;font-size: 12px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+          Patient Balance:<span style="color: white">21000</span></p>
+        <p
+          style="position:absolute;top:55px;left:69px;font-size:10px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 600;color: white">
+          CDS:&nbsp;<span style="font-weight: normal;color:black;"><mark
+              style="background-color:#eff1f1">Diagnosis of arial fibrillation - not on warfarin therapy&nbsp;</mark>&nbsp;<mark
+              style="background-color:#eff1f1">Known Allergies*</mark>&nbsp;<mark
+              style="background-color: #F0EC89">Adult Immunisation Schedule Age:65+</mark></span></p>
+      
+
+
+    </div> 
+   
+  </div>
+
+  <div class="col-sm-12">
+    <nav style="font-size: 13px;padding:0px;" class="navbar navbar-expand-sm navbar-light bg-light">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Request
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Exchange
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Summary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Education Resource</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">UpToDate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Appointment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Checklist</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Order Set
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Print</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Timeline Preview</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+  </div>
+
+  <div class="container" id="main1">
+    <div class="row">
+      <table class="col-sm-4">
+        <tr>
+          <td class="norm">
+            <div class="shadow p bg-white rounded">
+              <div class="headdiv" data-toggle="collapse" data-target="#complaint"
+                style="background-image:linear-gradient(to right, #17768c , #1696b4);">
+                <p class="headercoll"><span class="icons"><i class="fas fa-user-md"></i></span><span style="color: white">Chief Complaint</span></p>
+              </div>
+              <div id="complaint" class="table-striped collapse show" style="background-color: #EBF5FB;">
+                <table class="table"
+                  style="border-width: 5px;font-size: 13px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ">
+                  <tbody>
+
+                    <tr>
+                      <td>Mitral valve disorder</td>
+                    </tr>
+                    <tr>
+                      <td>Artoconory bypass value</td>
+                    </tr>
+                    <tr>
+                      <td>Chronic heart Failure</td>
+                    </tr>
+                    <tr>
+                      <td>Native coronary Artery</td>
+                    </tr>
+                    <tr>
+                      <td>Mitral valve disorder</td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="norm">
+            <div class="shadow p bg-white rounded">
+              <div class="headdiv" data-toggle="collapse" data-target="#allergy" style="background-image:linear-gradient(to right, #17768c , #1696b4);">
+              
+              <p class="headercoll"><span class="icons"><i class="fas fa-male"></i></span><span style="color: white">Allergy</span></p></div>
+              <div id="allergy" class="table-striped collapse show" style="background-color:#EBF5FB;">
+                <table class="table"
+                  style="font-size: 13px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ">
+                  <tbody>
+
+                    <tr>
+                      <td>Dynaper</td>
+                    </tr>
+                    <tr>
+                      <td>Terazozine</td>
+                    </tr>
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="norm">
+            <div class="shadow p bg-white rounded">
+              <div class="headdiv" data-toggle="collapse" data-target="#vitals" style="background-image:linear-gradient(to right, #17768c , #1696b4);">
+                <p class="headercoll"><span class="icons"><i class="fas fa-heartbeat"></i></span><span style="color: white">Vitals</span></p>
+              </div>
+              <div id="vitals" class="table-striped collapse show" style="background-color:#EBF5FB;">
+                <table class="table"
+                  style="font-size: 13px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ">
+                  <tbody>
+
+                    <tr>
+                      <td>BP Systolic</td>
+                      <td>96</td>
+                      <td>98</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td>BP Diastolic</td>
+                      <td>98</td>
+                      <td>88</td>
+                      <td>108</td>
+                    </tr>
+                    <tr>
+                      <td>Heart Rate</td>
+                      <td>98</td>
+                      <td>88</td>
+                      <td>108</td>
+                    </tr>
+                    <tr>
+                      <td>Respiratory rate</td>
+                      <td>20</td>
+                      <td>16</td>
+                      <td>18</td>
+                    </tr>
+                    <tr>
+                      <td>SPO2<span style="font-size: 8px">%</span></td>
+                      <td>99</td>
+                      <td>94</td>
+                      <td>95</td>
+                    </tr>
+                    <tr>
+                      <td>Temprature<span style="font-size: 8px">deg F</span></td>
+                      <td>98.6</td>
+                      <td>97.8</td>
+                      <td>95.3</td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="norm">
+            <div class="shadow p bg-white rounded">
+              <div class="headdiv" data-toggle="collapse" data-target="#charts" style="background-image:linear-gradient(to right, #17768c , #1696b4);">
+                <p class="headercoll"><span class="icons"><i class="fas fa-chart-bar"></i></span><span style="color: white">Charts</span></p>
+              </div>
+              <div id="charts" class="table-striped collapse show" style="background-color:#EBF5FB;">
+                <table class="table"
+                  style="font-size: 13px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ">
+                  <tbody>
+
+                    <tr>
+                      <td>Dynaper</td>
+                    </tr>
+                    <tr>
+                      <td>Terazozine</td>
+                    </tr>
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+
+
+
+
+      <table class="col-sm-4">
+        <tr>
+          <td class="norm">
+            <div class="shadow p bg-white rounded">
+              <div class="headdiv" data-toggle="collapse" data-target="#examination" style="background-image:linear-gradient(to right, #17768c , #1696b4);">
+                <p class="headercoll"><span class="icons"><i class="fas fa-stethoscope"></i></span><span style="color: white">Examination</span></p>
+              </div>
+              <div id="examination" class="table-striped collapse show" style="background-color:#EBF5FB;">
+                <table class="table"
+                  style="font-size: 13px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ">
+                  <tbody>
+
+                    <tr>
+                      <td>BP Systolic</td>
+                      <td>96</td>
+                      <td>98</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td>BP Diastolic</td>
+                      <td>98</td>
+                      <td>88</td>
+                      <td>108</td>
+                    </tr>
+                    <tr>
+                      <td>Heart Rate</td>
+                      <td>98</td>
+                      <td>88</td>
+                      <td>108</td>
+                    </tr>
+                    <tr>
+                      <td>Respiratory rate</td>
+                      <td>20</td>
+                      <td>16</td>
+                      <td>18</td>
+                    </tr>
+                    <tr>
+                      <td>SPO2<span style="font-size: 8px">%</span></td>
+                      <td>99</td>
+                      <td>94</td>
+                      <td>95</td>
+                    </tr>
+                    <tr>
+                      <td>Temprature<span style="font-size: 8px">deg F</span></td>
+                      <td>98.6</td>
+                      <td>97.8</td>
+                      <td>95.3</td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="norm">
+            <div class="shadow p bg-white rounded">
+              <div class="headdiv" data-toggle="collapse" data-target="#medication" style="background-image:linear-gradient(to right, #17768c , #1696b4);">
+                <p class="headercoll"><span class="icons"><i class="fas fa-pills"></i></span><span style="color: white">Medication</span></p>
+              </div>
+              <div id="medication" class="table-striped collapse show" style="background-color: #EBF5FB;">
+                <table class="table"
+                  style="font-size: 13px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ">
+                  <tbody>
+
+                    <tr>
+                      <td>Mitral valve disorder</td>
+                    </tr>
+                    <tr>
+                      <td>Artoconory bypass value</td>
+                    </tr>
+                    <tr>
+                      <td>Chronic heart Failure</td>
+                    </tr>
+                    <tr>
+                      <td>Native coronary Artery</td>
+                    </tr>
+                    <tr>
+                      <td>Mitral valve disorder</td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="norm">
+
+            <div class="shadow p bg-white rounded">
+              <div class="headdiv" data-toggle="collapse" data-target="#investigation" style="background-image:linear-gradient(to right, #17768c , #1696b4);">
+                <p class="headercoll"><span class="icons"><i class="fas fa-chart-bar"></i></span><span style="color: white">Investigation</span></p>
+              </div>
+              <div id="investigation" class="table-striped collapse show" style="background-color:#EBF5FB;">
+                <table class="table"
+                  style="font-size: 13px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ">
+                  <tbody>
+
+                    <tr>
+                      <td>Dynaper</td>
+                    </tr>
+                    <tr>
+                      <td>Terazozine</td>
+                    </tr>
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+      </table>
+
+
+      <table class="col-sm-4">
+        <tr>
+          <td class="norm">
+            <div class="shadow p bg-white rounded">
+
+              <div class="headdiv" data-toggle="collapse" data-target="#progress" style="background-image:linear-gradient(to right, #17768c , #1696b4);">
+                <p class="headercoll"><span class="icons"><i class="fas fa-tasks"></i></span><span style="color: white">Progress Notes</span></p>
+              </div>
+              <div id="progress" class="table-striped collapse show" style="background-color:#EBF5FB;">
+                <table class="table"
+                  style="font-size: 13px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ">
+                  <tbody>
+
+                    <tr>
+                      <td>Dynaper</td>
+                    </tr>
+                    <tr>
+                      <td>Terazozine</td>
+                    </tr>
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="norm">
+            <div class="shadow p bg-white rounded">
+              <div class="headdiv" data-toggle="collapse" data-target="#nursenote" style="background-image:linear-gradient(to right, #17768c , #1696b4);">
+                <p class="headercoll"><span class="icons"><i class="fas fa-user-nurse"></i></span><span style="color: white">Nursing Notes</span></p>
+              </div>
+              <div id="nursenote" class="table-striped collapse show" style="background-color:#EBF5FB;">
+                <table class="table"
+                  style="font-size: 13px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ">
+                  <tbody>
+
+                    <tr>
+                      <td>BP Systolic</td>
+                      <td>96</td>
+                      <td>98</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td>BP Diastolic</td>
+                      <td>98</td>
+                      <td>88</td>
+                      <td>108</td>
+                    </tr>
+                    <tr>
+                      <td>Heart Rate</td>
+                      <td>98</td>
+                      <td>88</td>
+                      <td>108</td>
+                    </tr>
+                    <tr>
+                      <td>Respiratory rate</td>
+                      <td>20</td>
+                      <td>16</td>
+                      <td>18</td>
+                    </tr>
+                    <tr>
+                      <td>SPO2<span style="font-size: 8px">%</span></td>
+                      <td>99</td>
+                      <td>94</td>
+                      <td>95</td>
+                    </tr>
+                    <tr>
+                      <td>Temprature<span style="font-size: 8px">deg F</span></td>
+                      <td>98.6</td>
+                      <td>97.8</td>
+                      <td>95.3</td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="norm">
+            <div class="shadow p bg-white rounded">
+              <div class="headdiv" data-toggle="collapse" data-target="#discharge" style="background-image:linear-gradient(to right, #17768c , #1696b4);">
+                <p class="headercoll"><span class="icons"><i class="fas fa-file-signature"></i></span><span style="color: white">Discharge Notes</span>
+                </p>
+              </div>
+              <div id="discharge" class="table-striped collapse show" style="background-color: #EBF5FB;">
+                <table class="table"
+                  style="font-size: 13px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ">
+                  <tbody>
+
+                    <tr>
+                      <td>Mitral valve disorder</td>
+                    </tr>
+                    <tr>
+                      <td>Artoconory bypass value</td>
+                    </tr>
+                    <tr>
+                      <td>Chronic heart Failure</td>
+                    </tr>
+                    <tr>
+                      <td>Native coronary Artery</td>
+                    </tr>
+                    <tr>
+                      <td>Mitral valve disorder</td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+
+    </div>
+  </div>
+
+
+
+</body> 
+</html> 
